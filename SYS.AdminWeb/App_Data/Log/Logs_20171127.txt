@@ -1,0 +1,2478 @@
+2017-11-27 09:47:27,473 [6] ERROR SYS.AdminWeb.App_Start.Filter.SYSExceptionFilter - 出现未处理异常：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ASP._Page_Views_Home_Index_cshtml.Execute() 位置 F:\1711\AMS\SYS.AdminWeb\Views\Home\Index.cshtml:行号 20
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   在 System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2017-11-27 09:48:37,021 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:48:37 +08:00
+
+2017-11-27 09:48:37,933 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:48:37,934 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:37,935 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:48:37,935 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:48:37 +08:00
+
+2017-11-27 09:48:37,941 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2017-11-27 09:48:37,941 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:37,947 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:48:37 +08:00
+
+2017-11-27 09:48:37,951 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:48:37 +08:00
+
+2017-11-27 09:48:38,018 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (6) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:48:38,018 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:38,018 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:48:38,018 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:48:38 +08:00
+
+2017-11-27 09:48:38,020 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:48:38,020 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:38,025 [7] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:48:38 +08:00
+
+2017-11-27 09:48:42,815 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:48:42 +08:00
+
+2017-11-27 09:48:42,816 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:48:42,816 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:42,816 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:48:42,816 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:48:42 +08:00
+
+2017-11-27 09:48:42,816 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:48:42,816 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:42,816 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:48:42 +08:00
+
+2017-11-27 09:48:42,817 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:48:42 +08:00
+
+2017-11-27 09:48:42,819 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:48:42,819 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:42,819 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:48:42,819 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:48:42 +08:00
+
+2017-11-27 09:48:42,822 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:48:42,822 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:42,822 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:48:42 +08:00
+
+2017-11-27 09:48:51,708 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:48:51 +08:00
+
+2017-11-27 09:48:51,709 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:48:51,709 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:51,709 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:48:51,709 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:48:51 +08:00
+
+2017-11-27 09:48:51,710 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-27 09:48:51,710 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:51,710 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:48:51 +08:00
+
+2017-11-27 09:48:51,711 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:48:51 +08:00
+
+2017-11-27 09:48:51,711 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:48:51,711 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:51,711 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:48:51,711 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:48:51 +08:00
+
+2017-11-27 09:48:51,712 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:48:51,712 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:48:51,712 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:48:51 +08:00
+
+2017-11-27 09:49:36,526 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:49:36 +08:00
+
+2017-11-27 09:49:36,527 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:49:36,527 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:49:36,527 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:49:36,527 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:49:36 +08:00
+
+2017-11-27 09:49:36,528 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-27 09:49:36,528 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:49:36,528 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:49:36 +08:00
+
+2017-11-27 09:49:36,528 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:49:36 +08:00
+
+2017-11-27 09:49:36,529 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:49:36,529 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:49:36,529 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:49:36,529 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:49:36 +08:00
+
+2017-11-27 09:49:36,531 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:49:36,531 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:49:36,531 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:49:36 +08:00
+
+2017-11-27 09:50:33,652 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:33 +08:00
+
+2017-11-27 09:50:34,570 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:34,571 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:34,572 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:34,572 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:34 +08:00
+
+2017-11-27 09:50:34,575 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:50:34,575 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:34,581 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:34 +08:00
+
+2017-11-27 09:50:34,584 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:34 +08:00
+
+2017-11-27 09:50:34,651 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (6) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:34,651 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:34,651 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:34,651 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:34 +08:00
+
+2017-11-27 09:50:34,654 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:50:34,654 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:34,659 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:34 +08:00
+
+2017-11-27 09:50:37,022 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:37 +08:00
+
+2017-11-27 09:50:37,023 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:37,023 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:37,023 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:37,023 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:37 +08:00
+
+2017-11-27 09:50:37,023 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:50:37,023 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:37,023 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:37 +08:00
+
+2017-11-27 09:50:37,024 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:37 +08:00
+
+2017-11-27 09:50:37,026 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:37,026 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:37,026 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:37,026 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:37 +08:00
+
+2017-11-27 09:50:37,029 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:50:37,029 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:37,029 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:37 +08:00
+
+2017-11-27 09:50:42,443 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:42 +08:00
+
+2017-11-27 09:50:42,443 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:42,443 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:42,443 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:42,443 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:42 +08:00
+
+2017-11-27 09:50:42,443 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:50:42,444 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:42,444 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:42 +08:00
+
+2017-11-27 09:50:42,444 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:42 +08:00
+
+2017-11-27 09:50:42,445 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 20
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:42,445 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:42,445 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:42,445 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:42 +08:00
+
+2017-11-27 09:50:42,448 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:50:42,448 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:42,448 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:42 +08:00
+
+2017-11-27 09:50:45,603 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:45 +08:00
+
+2017-11-27 09:50:45,604 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:45,604 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:45,604 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:45,604 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:45 +08:00
+
+2017-11-27 09:50:45,604 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:50:45,604 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:45,604 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:45 +08:00
+
+2017-11-27 09:50:45,605 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:45 +08:00
+
+2017-11-27 09:50:45,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 15
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:45,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:45,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:45,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:45 +08:00
+
+2017-11-27 09:50:45,609 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:50:45,609 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:45,609 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:45 +08:00
+
+2017-11-27 09:50:46,638 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:46 +08:00
+
+2017-11-27 09:50:46,639 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:46,639 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:46,639 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:46,639 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:46 +08:00
+
+2017-11-27 09:50:46,640 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-27 09:50:46,640 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:46,640 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:46 +08:00
+
+2017-11-27 09:50:46,641 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:46 +08:00
+
+2017-11-27 09:50:46,642 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 10
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:46,642 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:46,642 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:46,642 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:46 +08:00
+
+2017-11-27 09:50:46,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:50:46,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:46,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:46 +08:00
+
+2017-11-27 09:50:47,648 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:47 +08:00
+
+2017-11-27 09:50:47,648 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:47,648 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:47,648 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:47,648 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:47 +08:00
+
+2017-11-27 09:50:47,649 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:50:47,649 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:47,649 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:47 +08:00
+
+2017-11-27 09:50:47,649 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:47 +08:00
+
+2017-11-27 09:50:47,650 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 5
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:47,650 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:47,650 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:47,650 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:47 +08:00
+
+2017-11-27 09:50:47,653 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:50:47,653 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:47,653 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:47 +08:00
+
+2017-11-27 09:50:48,786 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:48 +08:00
+
+2017-11-27 09:50:48,786 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:48,786 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:48,786 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:48,786 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:48 +08:00
+
+2017-11-27 09:50:48,787 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:50:48,787 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:48,787 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:48 +08:00
+
+2017-11-27 09:50:48,787 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:48 +08:00
+
+2017-11-27 09:50:48,789 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 30
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:48,789 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:48,789 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:48,789 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:48 +08:00
+
+2017-11-27 09:50:48,793 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2017-11-27 09:50:48,793 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:48,793 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:48 +08:00
+
+2017-11-27 09:50:50,310 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:50 +08:00
+
+2017-11-27 09:50:50,310 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:50:50,310 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:50,310 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:50,310 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:50 +08:00
+
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:50 +08:00
+
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:50:50 +08:00
+
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:50:50,311 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:50:50 +08:00
+
+2017-11-27 09:50:50,312 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:50:50,312 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:50:50,312 [10] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:50:50 +08:00
+
+2017-11-27 09:51:27,551 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:27 +08:00
+
+2017-11-27 09:51:27,551 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:27,551 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:27,552 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:27,552 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:27 +08:00
+
+2017-11-27 09:51:27,560 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 8 ms with result: SqlDataReader
+
+2017-11-27 09:51:27,561 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:27,561 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:27 +08:00
+
+2017-11-27 09:51:27,561 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:27 +08:00
+
+2017-11-27 09:51:27,561 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (6) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:27,562 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:27,562 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:27,562 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:27 +08:00
+
+2017-11-27 09:51:27,566 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 4 ms with result: SqlDataReader
+
+2017-11-27 09:51:27,566 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:27,566 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:27 +08:00
+
+2017-11-27 09:51:29,245 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:29 +08:00
+
+2017-11-27 09:51:29,245 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:29,245 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:29,245 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:29,245 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:29 +08:00
+
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:29 +08:00
+
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:29 +08:00
+
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:29,246 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:29 +08:00
+
+2017-11-27 09:51:29,249 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:29,249 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:29,249 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:29 +08:00
+
+2017-11-27 09:51:30,289 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,290 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:30,290 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,290 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:30,290 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,290 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:30,290 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,290 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,291 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,291 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:30,291 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,291 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:30,291 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,292 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:30,292 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,292 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,735 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,735 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:30,736 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,736 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:30,736 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,736 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:30,736 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,736 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,736 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,737 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:30,737 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,737 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:30,737 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,737 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:30,737 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,737 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,921 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,922 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:30,922 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,922 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:30,922 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,922 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:30,923 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,923 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,923 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,923 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:30,923 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,923 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:30,923 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:30,924 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:30,924 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:30,924 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:30 +08:00
+
+2017-11-27 09:51:32,953 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:32 +08:00
+
+2017-11-27 09:51:32,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:32,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:32,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:32,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:32 +08:00
+
+2017-11-27 09:51:32,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:32,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:32,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:32 +08:00
+
+2017-11-27 09:51:32,955 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:32 +08:00
+
+2017-11-27 09:51:32,955 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:32,955 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:32,955 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:32,955 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:32 +08:00
+
+2017-11-27 09:51:32,957 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:32,957 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:32,957 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:32 +08:00
+
+2017-11-27 09:51:33,140 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,141 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,142 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:33,142 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,142 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:33,142 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,142 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:33,142 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,142 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,950 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,951 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,952 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 5
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:33,952 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,952 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:33,952 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:33,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:33,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:33,954 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:33 +08:00
+
+2017-11-27 09:51:35,147 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:35 +08:00
+
+2017-11-27 09:51:35,147 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:35,147 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:35,147 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:35,147 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:35 +08:00
+
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:35 +08:00
+
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:35 +08:00
+
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 10
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:35,148 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:35 +08:00
+
+2017-11-27 09:51:35,151 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:35,151 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:35,151 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:35 +08:00
+
+2017-11-27 09:51:36,168 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,169 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:36,169 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,169 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:36,169 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 15
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:36,170 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,174 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2017-11-27 09:51:36,174 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,174 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:36,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:36,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:36,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,647 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,647 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,647 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 20
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:36,647 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,647 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:36,647 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:36,650 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:36,650 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:36,650 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:36 +08:00
+
+2017-11-27 09:51:37,144 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,144 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:37,144 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,144 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:37,144 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,145 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:37,145 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,145 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,145 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,146 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 25
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:37,146 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,146 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:37,146 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,149 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:37,149 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,149 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,644 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:37,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:37,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:37,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 30
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:37,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:37,646 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:37,648 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:37,648 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:37,649 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:37 +08:00
+
+2017-11-27 09:51:39,239 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,239 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:39,239 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,239 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:39,239 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,240 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:39,240 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,240 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,240 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,242 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 45
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:39,242 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,242 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:39,242 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,244 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:39,244 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,245 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,685 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,685 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:39,685 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,685 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:39,685 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,686 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:39,686 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,686 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,686 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,687 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 65
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:39,687 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,687 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:39,687 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:39,690 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2017-11-27 09:51:39,691 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:39,691 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:39 +08:00
+
+2017-11-27 09:51:40,546 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:40 +08:00
+
+2017-11-27 09:51:40,546 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:40,546 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:40,546 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:40,546 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:40 +08:00
+
+2017-11-27 09:51:40,547 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:40,547 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:40,547 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:40 +08:00
+
+2017-11-27 09:51:40,547 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:40 +08:00
+
+2017-11-27 09:51:40,548 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 85
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:40,548 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:40,548 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:40,548 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:40 +08:00
+
+2017-11-27 09:51:40,551 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:40,551 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:40,551 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:40 +08:00
+
+2017-11-27 09:51:41,128 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,128 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:41,128 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,128 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:41,128 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,129 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:41,129 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,129 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,129 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,131 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 105
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:41,131 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,131 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:41,131 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,133 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:41,133 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,133 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,718 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,718 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:41,718 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,718 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:41,719 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,719 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:41,719 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,719 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,719 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,721 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 125
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:41,721 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,721 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:41,721 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:41,724 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:41,724 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:41,724 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:41 +08:00
+
+2017-11-27 09:51:42,835 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:42 +08:00
+
+2017-11-27 09:51:42,835 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:42,835 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:42,835 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:42,835 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:42 +08:00
+
+2017-11-27 09:51:42,836 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:42,836 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:42,836 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:42 +08:00
+
+2017-11-27 09:51:42,836 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:42 +08:00
+
+2017-11-27 09:51:42,838 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 140
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:42,838 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:42,838 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:42,838 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:42 +08:00
+
+2017-11-27 09:51:42,842 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 3 ms with result: SqlDataReader
+
+2017-11-27 09:51:42,842 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:42,842 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:42 +08:00
+
+2017-11-27 09:51:44,521 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:44 +08:00
+
+2017-11-27 09:51:44,521 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:44,521 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:44,521 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:44,521 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:44 +08:00
+
+2017-11-27 09:51:44,523 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:44,523 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:44,523 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:44 +08:00
+
+2017-11-27 09:51:44,523 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:44 +08:00
+
+2017-11-27 09:51:44,525 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 135
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:44,525 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:44,525 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:44,525 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:44 +08:00
+
+2017-11-27 09:51:44,527 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:44,527 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:44,527 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:44 +08:00
+
+2017-11-27 09:51:45,408 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:45 +08:00
+
+2017-11-27 09:51:45,408 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:45,408 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:45,408 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:45,408 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:45 +08:00
+
+2017-11-27 09:51:45,409 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:45,409 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:45,409 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:45 +08:00
+
+2017-11-27 09:51:45,409 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:45 +08:00
+
+2017-11-27 09:51:45,410 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 110
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:45,410 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:45,410 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:45,410 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:45 +08:00
+
+2017-11-27 09:51:45,413 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:45,413 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:45,413 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:45 +08:00
+
+2017-11-27 09:51:47,202 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,202 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:47,202 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,202 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:47,202 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 85
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:47,203 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,204 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:47,204 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,204 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,751 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,752 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:47,752 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,752 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:47,752 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,752 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:47,752 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,752 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,753 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,754 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 60
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:47,754 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,754 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:47,754 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:47,757 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:47,757 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:47,757 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:47 +08:00
+
+2017-11-27 09:51:48,643 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:48 +08:00
+
+2017-11-27 09:51:48,643 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:48,643 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:48,643 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:48,643 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:48 +08:00
+
+2017-11-27 09:51:48,643 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:48,644 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:48,644 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:48 +08:00
+
+2017-11-27 09:51:48,644 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:48 +08:00
+
+2017-11-27 09:51:48,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 35
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:48,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:48,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:48,645 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:48 +08:00
+
+2017-11-27 09:51:48,648 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:48,648 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:48,648 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:48 +08:00
+
+2017-11-27 09:51:49,214 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,214 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:49,214 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,214 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:49,214 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,215 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:49,215 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,215 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,215 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,215 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 10
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:49,215 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,216 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:49,216 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,216 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:49,216 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,216 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,779 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,779 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:49,780 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,780 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:49,780 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,780 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:49,780 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,780 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,780 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,781 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:49,781 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,781 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:49,781 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:49,781 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:49,781 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:49,781 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:49 +08:00
+
+2017-11-27 09:51:51,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:51 +08:00
+
+2017-11-27 09:51:51,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:51,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:51,606 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:51,607 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:51 +08:00
+
+2017-11-27 09:51:51,608 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-27 09:51:51,608 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:51,608 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:51 +08:00
+
+2017-11-27 09:51:51,608 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:51 +08:00
+
+2017-11-27 09:51:51,609 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 15
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:51,609 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:51,609 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:51,609 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:51 +08:00
+
+2017-11-27 09:51:51,610 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:51,610 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:51,610 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:51 +08:00
+
+2017-11-27 09:51:52,621 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:52 +08:00
+
+2017-11-27 09:51:52,621 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:52,621 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:52,621 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:52,621 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:52 +08:00
+
+2017-11-27 09:51:52,623 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-27 09:51:52,624 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:52,624 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:52 +08:00
+
+2017-11-27 09:51:52,624 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:52 +08:00
+
+2017-11-27 09:51:52,624 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 30
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:52,624 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:52,624 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:52,624 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:52 +08:00
+
+2017-11-27 09:51:52,625 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:52,625 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:52,625 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:52 +08:00
+
+2017-11-27 09:51:53,379 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,380 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:53,380 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,380 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,380 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,380 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,380 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,380 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,381 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,597 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,598 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,599 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:53,599 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,599 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,599 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,599 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,599 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,599 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,753 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,753 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:53,753 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,753 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,753 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,754 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,755 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,755 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,755 [3] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,918 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[T_IdNames] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+    )  AS [GroupBy1]
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,919 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,920 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：SELECT TOP (5) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[TypeName] AS [TypeName], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[ImgUrl] AS [ImgUrl]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeName] AS [TypeName], [Project1].[Name] AS [Name], [Project1].[ImgUrl] AS [ImgUrl], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeName] AS [TypeName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[ImgUrl] AS [ImgUrl], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            1 AS [C1]
+            FROM [dbo].[T_IdNames] AS [Extent1]
+            WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[TypeName] = @p__linq__0)
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-27 09:51:53,920 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,920 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- p__linq__0: '活动状态' (Type = String, Size = 4000)
+
+2017-11-27 09:51:53,920 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/27 9:51:53 +08:00
+
+2017-11-27 09:51:53,920 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-27 09:51:53,920 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：
+
+2017-11-27 09:51:53,920 [13] DEBUG SYS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/27 9:51:53 +08:00
+
